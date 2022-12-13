@@ -1,38 +1,74 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<ul class="flex flex-col gap-2">
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <ul class="flex flex-col gap-4 my-8">
+        <h3>listing ka-risutingudane</h3>
+        <li>
+          mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
+            >secret contents</a>
+        </li>
+        <li>
+          cat: <a
+            class="rounded-xl p-2 text-lg text-blue-600 font-mono"
+            href="/">secret contents</a
+          >
+        </li>
+        <li>
+          lizard: <a
+            class="rounded-xl p-2 text-xl text-pink-700 bg-white"
+            href="/">secret contents</a
+          >
+        </li>
+        <li>
+          snake: <a class="rounded-xl p-2 text-xs text-violet-200" href="/"
+            >secret contents</a>
+        </li>
+        <details class="indent-0">
+          <summary>dog</summary>
+          <div class="indent-20 flex flex-col gap-4">
+            <li>
+              shibe: <a class="rounded-xl p-2 text-indigo-300" href="/"
+                >secret contents</a>
+            </li>
+            <li>
+              leone: <a class="rounded-xl p-2 text-indigo-300" href="/"
+                >secret contents</a>
+            </li>
+            <details class="indent-20">
+              <summary>real</summary>
+              <div class="indent-40 flex flex-col gap-4">
+                <li>
+                  <a
+                    class="rounded-xl p-2 text-xl text-pink-700 bg-white"
+                    href="/">secret contents</a
+                  >
+                </li>
+                <li>
+                  bark: <a class="rounded-xl p-2 text-indigo-300" href="/"
+                    >secret contents</a>
+                </li>
+                <li>
+                  barking: <a class="rounded-xl p-2 text-indigo-300" href="/"
+                    >secret contents</a>
+                </li>
+              </div>
+            </details>
+          </div>
+        </details>
+      </ul>
+    </main>
+    <Footer />
+  </body>
 </html>
