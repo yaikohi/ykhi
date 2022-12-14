@@ -3,6 +3,21 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const url =
+  "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
+
+const token = import.meta.env.HONO_TOKEN as string;
+const res = await fetch(url, {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
+
+const data = await res.json();
+
+console.log(data);
+console.log(data);
 ---
 
 <!DOCTYPE html>
@@ -14,10 +29,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <Header title={SITE_TITLE} />
     <main>
       <ul class="flex flex-col gap-4 my-8">
-        <h3>listing ka-risutingudane</h3>
+        <h3>tweet lists</h3>
+        {
+          data?.media &&
+            data.media.map((tweet: any) => (
+              <li>
+                <img
+                  src={tweet?.url}
+                  alt={tweet?.alt_text || "no alt text provided"}
+                />
+                
+              </li>
+            ))
+        }
         <li>
           mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
-            >secret contents</a>
+            >secret contents</a
+          >
         </li>
         <li>
           cat: <a
@@ -33,18 +61,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         </li>
         <li>
           snake: <a class="rounded-xl p-2 text-xs text-violet-200" href="/"
-            >secret contents</a>
+            >secret contents</a
+          >
         </li>
         <details class="indent-0">
           <summary>dog</summary>
           <div class="indent-20 flex flex-col gap-4">
             <li>
               shibe: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                >secret contents</a>
+                >secret contents</a
+              >
             </li>
             <li>
               leone: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                >secret contents</a>
+                >secret contents</a
+              >
             </li>
             <details class="indent-20">
               <summary>real</summary>
@@ -57,11 +88,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
                 </li>
                 <li>
                   bark: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                    >secret contents</a>
+                    >secret contents</a
+                  >
                 </li>
                 <li>
                   barking: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                    >secret contents</a>
+                    >secret contents</a
+                  >
                 </li>
               </div>
             </details>
