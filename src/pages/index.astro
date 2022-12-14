@@ -4,15 +4,20 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-const url = "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/media";
-const header = {
+const url =
+  "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
+
+const token = import.meta.env.HONO_TOKEN as string;
+const res = await fetch(url, {
   headers: {
-    Authentication: `Bearer ${import.meta.env.HONO_TOKEN}`,
+    Authorization: `Bearer ${token}`,
   },
-};
-const res = await fetch(url, header);
-console.log(res);
-// console.log(await res.json());
+});
+
+const data = await res.json();
+
+console.log(data);
+console.log(data);
 ---
 
 <!DOCTYPE html>
@@ -24,7 +29,19 @@ console.log(res);
     <Header title={SITE_TITLE} />
     <main>
       <ul class="flex flex-col gap-4 my-8">
-        <h3>listing ka-risutingudane</h3>
+        <h3>tweet lists</h3>
+        {
+          data?.media &&
+            data.media.map((tweet: any) => (
+              <li>
+                <img
+                  src={tweet?.url}
+                  alt={tweet?.alt_text || "no alt text provided"}
+                />
+                
+              </li>
+            ))
+        }
         <li>
           mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
             >secret contents</a

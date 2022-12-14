@@ -58,6 +58,11 @@ fn main() {
   println!("Hello, world!");
 }
 ```
+```ts
+const res = await fetch('url', something);
+const data = await res.json();
+```
+
 
 ## List Types
 
