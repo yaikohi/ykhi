@@ -1,23 +1,24 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-const url =
-  "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
+import data from "../data/processed-liked-tweets.json";
+import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
 
-const token = import.meta.env.HONO_TOKEN as string;
-const res = await fetch(url, {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+// const url =
+//   "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
 
-const data = await res.json();
+// const token = import.meta.env.HONO_TOKEN as string;
+// const res = await fetch(url, {
+//   headers: {
+//     Authorization: `Bearer ${token}`,
+//   },
+// });
 
-console.log(data);
-console.log(data);
+// const data = await res.json();
+const pplfromtwitter = data as unknown as IUserObj[];
 ---
 
 <!DOCTYPE html>
@@ -29,19 +30,57 @@ console.log(data);
     <Header title={SITE_TITLE} />
     <main>
       <ul class="flex flex-col gap-4 my-8">
-        <h3>tweet lists</h3>
-        {
-          data?.media &&
-            data.media.map((tweet: any) => (
-              <li>
-                <img
-                  src={tweet?.url}
-                  alt={tweet?.alt_text || "no alt text provided"}
-                />
-                
-              </li>
-            ))
-        }
+        <div class="flex gap-8 max-w-[1000px]">
+          <ul class="bg-slate-900 px-4 my-8">
+            {
+              pplfromtwitter.map((person) => (
+                <li class="py-8">
+                  <a class="" href={`https://twitter.com/${person.username}`}>
+                    {person.username}
+                  </a>
+                  <ul class="bg-slate-800 mx-2 flex flex-col gap-6">
+                    {person.tweets.map((tweet: ITweetObj) => (
+                      <li class="flex flex-col gap-2">
+                        <p>{tweet.text}</p>
+                        <span class="text-slate-400">
+                          <time
+                            datetime={new Date(
+                              tweet.created_at
+                            ).toLocaleDateString()}
+                          >
+                            {new Date(tweet.created_at).toLocaleDateString()}
+                          </time>
+                        </span>
+                        {tweet?.media &&
+                          tweet.media.map((mdia: IMediaObj) => (
+                            <>
+                              <ul class="bg-slate-900 p-2">
+                                <details>
+                                  {mdia.type === "photo" && (
+                                  <summary>{mdia.type}</summary>
+                                    <img src={mdia.url} />
+                                  )}
+                                  {mdia.type === "video" && (
+                                  <summary>{mdia.type} preview</summary>
+                                    
+                                  <img
+                                      src={mdia.preview_image_url}
+                                      alt="video preview"
+                                    />
+                                  )}
+                                </details>
+                              </ul>
+                            </>
+                          ))}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
         <li>
           mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
             >secret contents</a
