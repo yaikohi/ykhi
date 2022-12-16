@@ -4,7 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-import data from "../data/processed-liked-tweets.json";
+import data from "../data/process2.json";
 import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
 
 // const url =
@@ -18,11 +18,12 @@ import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
 // });
 
 // const data = await res.json();
-const pplfromtwitter = data as IUserObj[];
+const tweetsfromtwitter = data as unknown as ITweetObj[];
 
-const linkToUserOnTwitter = (username: string) => `https://twitter.com/${username}`
-const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twitter.com/${username}/status/${tweetId}`
-
+const linkToUserOnTwitter = (username: string) =>
+  `https://twitter.com/${username}`;
+const linkToTweetOnTwitter = (username: string, tweetId: string) =>
+  `https://twitter.com/${username}/status/${tweetId}`;
 ---
 
 <!DOCTYPE html>
@@ -35,57 +36,53 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twi
     <main>
       <ul class="">
         <div class="">
-          <ul class="px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px]">
+          <ul
+            class="px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px"
+          >
             {
-              pplfromtwitter.map((person) => (
-                <li class="rounded-xl flex gap-2">
-                  <a class="" href={linkToUserOnTwitter(person.username)}>
-                    {person.id}
+              tweetsfromtwitter.map((tweet) => (
+                <li>
+                  <a
+                    href={linkToTweetOnTwitter(tweet.author.username, tweet.id)}
+                  >
+                    {tweet.id}
                   </a>
-                  <ul class="flex flex-row gap-2 px-3 py-2 rounded-xl">
-                    {person.tweets.map((tweet: ITweetObj) => (
-                     
-                      <li class="">
-                        <details>
-                          <summary>
-                            <p class="text-rose-400">{tweet.id}</p>
-                          </summary>
-                          <p>
-                            <a href={linkToTweetOnTwitter(person.username, tweet.id)}> {tweet.text}</a>
-                          </p>
-                        <span class="text-yellow-400">
-                          <time
-                            datetime={new Date(
-                              tweet.created_at
-                            ).toLocaleDateString()}
-                          >
-                            {new Date(tweet.created_at).toLocaleDateString()}
-                          </time>
-                        </span>
-                     
-                        {tweet?.media &&
-                          tweet.media.map((mdia: IMediaObj) => (
-                            <>
-                              <ul class="bg-slate-800 p-2 rounded-xl">
-                                <details>
-                                  {mdia.type === "photo" && (
-                                  <summary class="min-w-full" >{mdia.media_key}</summary>
-                                    <img src={mdia.url} />
-                                  )}
-                                  {mdia.type === "video" && (
-                                  <summary>{mdia.media_key} preview</summary>
+                  <a href={linkToUserOnTwitter(tweet.author.username)}>
+                    {tweet.author.id}
+                  </a>
+                  <ul>
+                    {tweet.media &&
+                      tweet.media.map((mediaItem) => (
+                        <li>
+                          <details>
+                            <summary>{mediaItem.type}</summary>
+
+                            {mediaItem.type === "photo" && (
+                              <div class="max-h-[200px] min-w-[200px]">
+                                <img
+                                  src={mediaItem.url}
+                                  alt={
+                                    mediaItem.alt_text ||
+                                    "No alt text provided..."
+                                  }
+                                />
+                              </div>
+                            )}
+                            {mediaItem.type === "video" ||
+                              (mediaItem.type === "animated_gif" && (
+                                <div class="max-h-[200px] min-w-[200px]">
                                   <img
-                                      src={mdia.preview_image_url}
-                                      alt="video preview"
-                                    />
-                                  )}
-                                </details>
-                              </ul>
-                            </>
-                          ))}
-                        </details>
-                      </li>
-                    ))}
+                                    src={mediaItem.preview_image_url}
+                                    alt={
+                                      mediaItem.alt_text ||
+                                      "No alt text provided..."
+                                    }
+                                  />
+                                </div>
+                              ))}
+                          </details>
+                        </li>
+                      ))}
                   </ul>
                 </li>
               ))
@@ -93,7 +90,7 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twi
           </ul>
         </div>
 
- <li>
+        <!-- <li>
           mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
             >secret contents</a
           >
@@ -114,8 +111,8 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twi
           snake: <a class="rounded-xl p-2 text-xs text-violet-200" href="/"
             >secret contents</a
           >
-        </li>
-        <details class="indent-0">
+        </li> -->
+        <!-- <details class="indent-0">
           <summary>dog</summary>
           <div class="indent-20 flex flex-col gap-4">
             <li>
@@ -150,7 +147,7 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twi
               </div>
             </details>
           </div>
-        </details>
+        </details> -->
       </ul>
     </main>
     <Footer />

@@ -6,6 +6,7 @@ export interface ITweetObj {
   text: string;
   edit_history_tweet_ids: string[];
   media?: IMediaObj[];
+  author: IUserObj;
 }
 
 export interface IMediaObj {
@@ -15,6 +16,7 @@ export interface IMediaObj {
   media_key: string;
   width: number;
   preview_image_url?: string;
+  alt_text?: string;
 }
 
 export interface IUserObj {
@@ -35,4 +37,4 @@ export interface IPublicMetrics {
   listed_count: number;
 }
 
-export type TMediaType = "photo" | "video";
+export type TMediaType = "photo" | "video" | "animated_gif";
