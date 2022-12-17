@@ -37,11 +37,11 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
       <ul class="">
         <div class="">
           <ul
-            class="px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px"
+            class="flex flex-wrap max-w-xl px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px"
           >
             {
               tweetsfromtwitter.map((tweet) => (
-                <li>
+                <li class="bg-slate-900 p-4 m-1 hover:shadow-md rounded-xl">
                   <a
                     href={linkToTweetOnTwitter(tweet.author.username, tweet.id)}
                   >
@@ -50,16 +50,30 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
                   <a href={linkToUserOnTwitter(tweet.author.username)}>
                     {tweet.author.id}
                   </a>
-                  <ul>
+                  <ul class="flex flex-row">
+                    <li class="max-w-md">
+                      <details>
+                        <summary>{tweet.author.id}</summary>
+                        <p class="text-yellow-200 ml-8">
+                          
+                            {tweet.author.username}
+                          
+                          </p>
+                      </details>
+                    </li>
+                  </ul>
+                  <ul class="flex flex-col">
                     {tweet.media &&
                       tweet.media.map((mediaItem) => (
-                        <li>
+                        <li class="text-rose-400 ml-16">
                           <details>
-                            <summary>{mediaItem.type}</summary>
-
+                            <summary>{mediaItem.media_key}</summary>
                             {mediaItem.type === "photo" && (
-                              <div class="max-h-[200px] min-w-[200px]">
+                              <div class="max-h-full ml-16  min-w-[200px]">
+                                <p class="text-white p-2 bg-slate-800 rounded-t-xl">{tweet.text}</p>
+
                                 <img
+                                  class="rounded-b-xl"
                                   src={mediaItem.url}
                                   alt={
                                     mediaItem.alt_text ||
@@ -70,7 +84,7 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
                             )}
                             {mediaItem.type === "video" ||
                               (mediaItem.type === "animated_gif" && (
-                                <div class="max-h-[200px] min-w-[200px]">
+                                <div class="max-h-full min-w-[200px]">
                                   <img
                                     src={mediaItem.preview_image_url}
                                     alt={
