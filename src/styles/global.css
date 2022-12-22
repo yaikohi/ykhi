@@ -25,12 +25,11 @@
 
 body {
   font-family: Verdana, sans-serif;
-  margin-right: 40rem;
   padding: 2rem;
   /* max-width: 65ch; */
   /* text-align: left; */
   /* background-color: rgb(33, 33, 33); */
-  background: rgb(15,23,42);
+  /* background: rgb(15,23,42); */
   background: linear-gradient(90deg, rgba(15,23,42,1) 0%, rgba(41,41,62,1) 80%, rgba(134,100,123,1) 100%); 
   color: rgb(223, 223, 223);
   overflow-wrap: break-word;
