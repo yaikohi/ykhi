@@ -3,26 +3,6 @@ import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-
-import data from "../data/processed-liked-tweets.json";
-import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
-
-// const url =
-//   "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
-
-// const token = import.meta.env.HONO_TOKEN as string;
-// const res = await fetch(url, {
-//   headers: {
-//     Authorization: `Bearer ${token}`,
-//   },
-// });
-
-// const data = await res.json();
-const pplfromtwitter = data as IUserObj[];
-
-const linkToUserOnTwitter = (username: string) => `https://twitter.com/${username}`
-const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twitter.com/${username}/status/${tweetId}`
-
 ---
 
 <!DOCTYPE html>
@@ -32,126 +12,37 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) => `https://twi
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <main>
-      <ul class="">
-        <div class="">
-          <ul class="px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px]">
-            {
-              pplfromtwitter.map((person) => (
-                <li class="rounded-xl flex gap-2">
-                  <a class="" href={linkToUserOnTwitter(person.username)}>
-                    {person.id}
-                  </a>
-                  <ul class="flex flex-row gap-2 px-3 py-2 rounded-xl">
-                    {person.tweets.map((tweet: ITweetObj) => (
-                     
-                      <li class="">
-                        <details>
-                          <summary>
-                            <p class="text-rose-400">{tweet.id}</p>
-                          </summary>
-                          <p>
-                            <a href={linkToTweetOnTwitter(person.username, tweet.id)}> {tweet.text}</a>
-                          </p>
-                        <span class="text-yellow-400">
-                          <time
-                            datetime={new Date(
-                              tweet.created_at
-                            ).toLocaleDateString()}
-                          >
-                            {new Date(tweet.created_at).toLocaleDateString()}
-                          </time>
-                        </span>
-                     
-                        {tweet?.media &&
-                          tweet.media.map((mdia: IMediaObj) => (
-                            <>
-                              <ul class="bg-slate-800 p-2 rounded-xl">
-                                <details>
-                                  {mdia.type === "photo" && (
-                                  <summary class="min-w-full" >{mdia.media_key}</summary>
-                                    <img src={mdia.url} />
-                                  )}
-                                  {mdia.type === "video" && (
-                                  <summary>{mdia.media_key} preview</summary>
-                                  <img
-                                      src={mdia.preview_image_url}
-                                      alt="video preview"
-                                    />
-                                  )}
-                                </details>
-                              </ul>
-                            </>
-                          ))}
-                        </details>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))
-            }
-          </ul>
+    <main class="font-social-reg">
+      <div class="flex flex-col max-w-md">
+        <sup class="indent-14 font-dotGothic16">やいこひ</sup>
+        <sup class="font-dotGothic16">どうもエリックともうします</sup>
+        <h2 class="font-bold">hi im erik</h2>
+        <div class="py-4 flex flex-col gap-2">
+          <sup class="text-slate-500 font-dotGothic16">
+            何をここに書こうかよく分からなくてどうも。
+          </sup>
+          <p class="font-dotGothic16">
+            今は応用科学大学ユトレヒトでの3.5年生で、<a
+              href="https://www.cleverfranke.com/">CLEVER°FRANKE</a
+            >でフロントエンド開発者としてインターンしています。前は<a
+              href="https://www.pttrns.ai"
+            >
+              PTTRNS.ai</a
+            >でフロントエンド開発者としてインターンしました。時々日本語や不閑静なアプリを作ったりします。
+          </p>
+          <!-- <img src="" alt="" /> -->
+          <!-- <ul class="indent-8 list-disc">
+            <li class="list-ite m">
+              front-end developer
+              <a href="https://www.cleverfranke.com/">CLEVER°FRANKE</a>;
+            </li>
+            <li class="list-item">
+              front-end developer
+              <a href="https://www.pttrns.ai"> PTTRNS.ai</a>.
+            </li>
+          </ul> -->
         </div>
-
- <li>
-          mouse: <a class="rounded-xl p-2 text-indigo-300" href="/"
-            >secret contents</a
-          >
-        </li>
-        <li>
-          cat: <a
-            class="rounded-xl p-2 text-lg text-blue-600 font-mono"
-            href="/">secret contents</a
-          >
-        </li>
-        <li>
-          lizard: <a
-            class="rounded-xl p-2 text-xl text-pink-700 bg-white"
-            href="/">secret contents</a
-          >
-        </li>
-        <li>
-          snake: <a class="rounded-xl p-2 text-xs text-violet-200" href="/"
-            >secret contents</a
-          >
-        </li>
-        <details class="indent-0">
-          <summary>dog</summary>
-          <div class="indent-20 flex flex-col gap-4">
-            <li>
-              shibe: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                >secret contents</a
-              >
-            </li>
-            <li>
-              leone: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                >secret contents</a
-              >
-            </li>
-            <details class="indent-20">
-              <summary>real</summary>
-              <div class="indent-40 flex flex-col gap-4">
-                <li>
-                  <a
-                    class="rounded-xl p-2 text-xl text-pink-700 bg-white"
-                    href="/">secret contents</a
-                  >
-                </li>
-                <li>
-                  bark: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                    >secret contents</a
-                  >
-                </li>
-                <li>
-                  barking: <a class="rounded-xl p-2 text-indigo-300" href="/"
-                    >secret contents</a
-                  >
-                </li>
-              </div>
-            </details>
-          </div>
-        </details>
-      </ul>
+      </div>
     </main>
     <Footer />
   </body>
