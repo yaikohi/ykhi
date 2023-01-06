@@ -1,23 +1,23 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+// import Header from "../components/Header.astro";
+// import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-);
+// // Use Astro.glob() to fetch all posts, and then sort them by date.
+// const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+//   (a, b) =>
+//     new Date(b.frontmatter.pubDate).valueOf() -
+//     new Date(a.frontmatter.pubDate).valueOf()
+// );
 
-const aocPosts = (
-  await Astro.glob("./blog/advent-of-code/2022/*.{md,mdx}")
-).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-);
+// const aocPosts = (
+//   await Astro.glob("./blog/advent-of-code/2022/*.{md,mdx}")
+// ).sort(
+//   (a, b) =>
+//     new Date(b.frontmatter.pubDate).valueOf() -
+//     new Date(a.frontmatter.pubDate).valueOf()
+// );
 ---
 
 <!DOCTYPE html>
@@ -26,9 +26,11 @@ const aocPosts = (
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
-    <main class="flex">
-      <section class="my-8">
+    <!-- <Header /> -->
+    <main>
+      <h1 class="py-2">how did u get here?</h1>
+      <h2>under construction</h2>
+      <!-- <section class="my-8">
         <h1 class="">blog</h1>
         <ul>
           {
@@ -77,9 +79,9 @@ const aocPosts = (
             </ul>
           </section>
         </ul>
-      </section>
-      <hr />
+      </section> -->
+      <!-- <hr /> -->
     </main>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>

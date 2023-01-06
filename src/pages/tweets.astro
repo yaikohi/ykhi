@@ -1,11 +1,11 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+// import Header from "@components/Header.astro";
+// import Footer from "@components/Footer.astro";
 
-import data from "../data/process2.json";
-import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
+// import data from "../data/process2.json";
+// import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
 
 // const url =
 //   "https://hot-buns-dev.up.railway.app/api/tweets/hhhghq0/likes/media";
@@ -18,12 +18,12 @@ import type { IMediaObj, ITweetObj, IUserObj } from "@typings/twitter";
 // });
 
 // const data = await res.json();
-const tweetsfromtwitter = data as unknown as ITweetObj[];
+// const tweetsfromtwitter = data as unknown as ITweetObj[];
 
-const linkToUserOnTwitter = (username: string) =>
-  `https://twitter.com/${username}`;
-const linkToTweetOnTwitter = (username: string, tweetId: string) =>
-  `https://twitter.com/${username}/status/${tweetId}`;
+// const linkToUserOnTwitter = (username: string) =>
+//   `https://twitter.com/${username}`;
+// const linkToTweetOnTwitter = (username: string, tweetId: string) =>
+//   `https://twitter.com/${username}/status/${tweetId}`;
 ---
 
 <!DOCTYPE html>
@@ -32,9 +32,11 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
+    <!-- <Header title={SITE_TITLE} /> -->
     <main>
-      <ul class="">
+      <h1 class="py-2">how did u get here?</h1>
+      <h2>under construction</h2>
+      <!-- <ul class="">
         <div class="">
           <ul
             class="flex flex-wrap max-w-xl px-4 rounded-xl overflow-x-auto min-w-[1000px] max-w-[1000px"
@@ -126,7 +128,7 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
             >secret contents</a
           >
         </li> -->
-        <!-- <details class="indent-0">
+      <!-- <details class="indent-0">
           <summary>dog</summary>
           <div class="indent-20 flex flex-col gap-4">
             <li>
@@ -161,9 +163,9 @@ const linkToTweetOnTwitter = (username: string, tweetId: string) =>
               </div>
             </details>
           </div>
-        </details> -->
-      </ul>
+        </details>
+      </ul> -->
     </main>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>
