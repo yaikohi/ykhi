@@ -1,6 +1,5 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
-// import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
@@ -10,12 +9,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
-    <!-- <Header title={SITE_TITLE} /> -->
+  <body class="max-w-sm mx-auto py-20">
     <main class="font-social-reg">
       <div class="max-w-md">
         <div class="flex flex-col max-w-md group">
-          <!-- title -->
           <sup class="text-slate-500 font-dotGothic16">
             何をここに書こうかよく分からなくてようこそわたしのウェブサイトへ...
           </sup>
@@ -27,20 +24,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
             >エリック</sub
           >
         </div>
-        <!-- pic of me -->
-        <!-- <div class="max-w-[250px] max-h-[250px]"> -->
-        <!-- <img
-            class="absolute grayscale blur-3xl w-[250px] h-[250px] my-8 mx-auto rounded-[30px] shadow-md hover:shadow-slate-800"
-            src="/me_irl.jpg"
-            alt="me"
-          /> -->
         <img
           class="lg:blur-sm lg:hover:blur-0 grayscale w-[250px] h-[250px] -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
           src="/me_irl.jpg"
           alt="me"
         />
-        <!-- </div> -->
-        <!-- paragraph -->
         <div class="pt-8 flex flex-col gap-2">
           <p class="font-dotGothic16">
             今は応用科学大学ユトレヒトでの3.5年生で、<a
@@ -49,11 +37,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
               href="https://www.pttrns.ai"
             >
               PTTRNS.ai</a
-            >でフロントエンド開発者としてインターンしました。時々日本語を勉強したり、不完成なアプリを作ったりします。
+            >でフロントエンド開発者としてインターンしました。
+          </p>
+          <p class="text-sm font-light font-dotGothic16">
+            私は時々日本語を勉強したり、自分のホビープロジェクトを途中で諦めたりします。
           </p>
         </div>
       </div>
     </main>
-    <Footer />
+    <Footer lang="en" />
   </body>
 </html>
