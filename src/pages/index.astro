@@ -11,16 +11,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
+    <!-- <Header title={SITE_TITLE} /> -->
     <main class="font-social-reg">
-      <div class="flex flex-col max-w-md">
-        <sup class="indent-14 font-dotGothic16">やいこひ</sup>
-        <sup class="font-dotGothic16">どうもエリックともうします</sup>
-        <h2 class="font-bold">hi im erik</h2>
-        <div class="py-4 flex flex-col gap-2">
+      <div class="max-w-md">
+        <div class="flex flex-col max-w-md group">
+          <!-- title -->
           <sup class="text-slate-500 font-dotGothic16">
-            何をここに書こうかよく分からなくてどうも。
+            何をここに書こうかよく分からなくてようこそわたしのウェブサイトへ...
           </sup>
+          <h2 class="font-dotGothic16 font-bold">
+            どうも、<span class="text-yellow-400">Erik</span>と申します
+          </h2>
+          <sub
+            class="indent-[97px] group-hover:block hidden font-dotGothic16 text-slate-400"
+            >エリック</sub
+          >
+        </div>
+        <!-- pic of me -->
+        <!-- <div class="max-w-[250px] max-h-[250px]"> -->
+        <!-- <img
+            class="absolute grayscale blur-3xl w-[250px] h-[250px] my-8 mx-auto rounded-[30px] shadow-md hover:shadow-slate-800"
+            src="/me_irl.jpg"
+            alt="me"
+          /> -->
+        <img
+          class="blur-sm hover:blur-0 grayscale w-[250px] h-[250px] -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
+          src="/me_irl.jpg"
+          alt="me"
+        />
+        <!-- </div> -->
+        <!-- paragraph -->
+        <div class="pt-8 flex flex-col gap-2">
           <p class="font-dotGothic16">
             今は応用科学大学ユトレヒトでの3.5年生で、<a
               href="https://www.cleverfranke.com/">CLEVER°FRANKE</a
@@ -28,19 +49,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
               href="https://www.pttrns.ai"
             >
               PTTRNS.ai</a
-            >でフロントエンド開発者としてインターンしました。時々日本語や不閑静なアプリを作ったりします。
+            >でフロントエンド開発者としてインターンしました。時々日本語を勉強したり、不完成なアプリを作ったりします。
           </p>
-          <!-- <img src="" alt="" /> -->
-          <!-- <ul class="indent-8 list-disc">
-            <li class="list-ite m">
-              front-end developer
-              <a href="https://www.cleverfranke.com/">CLEVER°FRANKE</a>;
-            </li>
-            <li class="list-item">
-              front-end developer
-              <a href="https://www.pttrns.ai"> PTTRNS.ai</a>.
-            </li>
-          </ul> -->
         </div>
       </div>
     </main>

@@ -1,8 +1,17 @@
 ---
-const today = new Date();
+const today = new Date().toLocaleDateString();
 ---
 
-<footer class="mx-2 my-2 text-sm flex gap-2 py-8">
-  <a class="italic text-xs" href="https://twitter.com/hhhgh10" target="_blank">Twitter</a>
-  <a class="italic text-xs" href="https://github.com/yaikohi" target="_blank">GitHub</a>
+<footer class="my-2 text-sm flex flex-col gap-2 py-8">
+  <div class="last-child:mx-2">
+    <a class="italic text-xs" href="https://twitter.com/hhhgh10" target="_blank"
+      >Twitter</a
+    >
+    <a class="italic text-xs" href="https://github.com/yaikohi" target="_blank"
+      >GitHub</a
+    >
+  </div>
+  <p class="text-xs italic text-slate-300">
+    Today's date:<time class="text-rose-300" datetime={today}> {today}</time>
+  </p>
 </footer>
