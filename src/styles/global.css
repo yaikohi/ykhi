@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16");
 /* font-family: 'DotGothic16', sans-serif; */
 
 @tailwind base;
@@ -9,60 +9,84 @@
   /*
   Font types
   */
+
+  /* HAIRLINE */
   @font-face {
-    font-family: "Social Black";
-    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff")
-        format("woff"),
-      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff2")
-        format("woff2");
-  }
-  @font-face {
-    font-family: "Social Bold";
-    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff")
-        format("woff"),
-      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff2")
-        format("woff2");
-  }
-  @font-face {
-    font-family: "Social Book";
-    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff")
-        format("woff"),
-      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
-        format("woff2");
-  }
-  @font-face {
-    font-family: "Social Hairline";
+    font-family: "Social";
+    font-weight: 200;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff2")
         format("woff2");
   }
+  /* THIN */
   @font-face {
-    font-family: "Social Light";
+    font-family: "Social";
+    font-weight: 350;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff2")
+        format("woff2");
+  }
+
+  /* LIGHT */
+  @font-face {
+    font-family: "Social";
+    font-weight: light;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff2")
         format("woff2");
   }
+
+  /* REGULAR */
   @font-face {
-    font-family: "Social Medium";
-    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff")
-        format("woff"),
-      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
-        format("woff2");
-  }
-  @font-face {
-    font-family: "Social Regular";
+    font-family: "Social";
+    font-weight: 400;
+
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff2")
         format("woff2");
   }
+
+  /* BOOK */
   @font-face {
-    font-family: "Social Thin";
-    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff")
+    font-family: "Social";
+    font-weight: 400;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff")
         format("woff"),
-      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff2")
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
+        format("woff2");
+  }
+
+  /* MEDIUM */
+  @font-face {
+    font-family: "Social";
+    font-weight: 600;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
+        format("woff2");
+  }
+
+  /* BOLD */
+  @font-face {
+    font-family: "Social";
+    font-weight: bold;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff2")
+        format("woff2");
+  }
+
+  /* BLACK */
+  @font-face {
+    font-family: "Social";
+    font-weight: 800;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff2")
         format("woff2");
   }
 
