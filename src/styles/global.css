@@ -15,6 +15,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Bold";
@@ -22,6 +23,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Book";
@@ -29,6 +31,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Hairline";
@@ -36,6 +39,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Light";
@@ -43,6 +47,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Medium";
@@ -50,6 +55,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Regular";
@@ -57,6 +63,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff2")
         format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "Social Thin";
@@ -64,6 +71,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff2")
         format("woff2");
+    font-display: swap;
   }
 
   a {
