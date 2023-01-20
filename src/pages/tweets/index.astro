@@ -1,0 +1,28 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="max-w-sm mx-auto py-20">
+    <main class="font-social">
+      <div class="max-w-md">
+        <h1>tweets</h1>
+        <p class="italic">... that I found and like</p>
+        <ul>
+          <li><div>tweet</div></li>
+          <li><div>tweet</div></li>
+          <li><div>tweet</div></li>
+          <li><div>tweet</div></li>
+        </ul>
+      </div>
+    </main>
+
+    <Footer lang="jp" />
+  </body>
+</html>

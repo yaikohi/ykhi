@@ -1,6 +1,7 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
@@ -10,6 +11,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="max-w-sm mx-auto py-20">
+    <Header />
     <main class="font-social-reg">
       <div class="max-w-md">
         <div class="flex flex-col max-w-md group">
