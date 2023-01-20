@@ -26,6 +26,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff2")
         format("woff2");
+    font-display: swap;
   }
 
   /* LIGHT */
@@ -58,6 +59,8 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
         format("woff2");
+            font-display: swap;
+
   } */
 
   /* MEDIUM */
@@ -68,6 +71,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
         format("woff2");
+    font-display: swap;
   } */
 
   /* BOLD */
@@ -78,6 +82,8 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff2")
         format("woff2");
+        font-display: swap;
+
   }
 
   /* BLACK */
