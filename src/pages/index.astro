@@ -3,6 +3,7 @@ import { Image } from "@astrojs/image/components";
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import me from "../assets/images/me_irl.jpg";
 ---
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
           width={250}
           height={250}
           class="lg:blur-sm lg:hover:blur-0 grayscale -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
-          src="/images/me_irl.jpg"
+          src={me}
           alt="me"
           format={"webp"}
         />

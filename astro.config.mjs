@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    image({ logLevel: "debug" }),
+    image({ logLevel: "info" }),
     tailwind({
       config: {
         applyBaseStyles: false,
