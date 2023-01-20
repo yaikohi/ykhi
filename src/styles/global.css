@@ -29,7 +29,7 @@
   }
 
   /* LIGHT */
-  @font-face {
+  /* @font-face {
     font-family: "Social";
     font-weight: light;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff")
@@ -37,10 +37,10 @@
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff2")
         format("woff2");
     font-display: swap;
-  }
+  } */
 
   /* REGULAR */
-  @font-face {
+  /* @font-face {
     font-family: "Social";
     font-weight: 400;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff")
@@ -48,27 +48,27 @@
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff2")
         format("woff2");
     font-display: swap;
-  }
+  } */
 
   /* BOOK */
-  @font-face {
+  /* @font-face {
     font-family: "Social";
     font-weight: 400;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
         format("woff2");
-  }
+  } */
 
   /* MEDIUM */
-  @font-face {
+  /* @font-face {
     font-family: "Social";
     font-weight: 600;
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
         format("woff2");
-  }
+  } */
 
   /* BOLD */
   @font-face {
