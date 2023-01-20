@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-/* font-family: 'DotGothic16', sans-serif; */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +15,9 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff2")
         format("woff2");
+    font-display: swap;
   }
+
   /* THIN */
   @font-face {
     font-family: "Social";
@@ -37,17 +36,18 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff2")
         format("woff2");
+    font-display: swap;
   }
 
   /* REGULAR */
   @font-face {
     font-family: "Social";
     font-weight: 400;
-
     src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff")
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff2")
         format("woff2");
+    font-display: swap;
   }
 
   /* BOOK */
@@ -88,6 +88,7 @@
         format("woff"),
       url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff2")
         format("woff2");
+    font-display: swap;
   }
 
   a {

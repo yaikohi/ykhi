@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
@@ -9,8 +10,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="max-w-sm mx-auto py-20">
-    <main class="font-social">
+  <body class="max-w-md mx-auto py-20">
+    <main class="font-social-reg">
       <div class="max-w-md">
         <div class="flex flex-col max-w-md">
           <sup class="text-slate-500 font-dotGothic16">
@@ -22,13 +23,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
             hi, my name is <span class="text-yellow-400">Erik</span>
           </h2>
         </div>
-        <img
-          class="lg:blur-sm lg:hover:blur-0 grayscale w-[250px] h-[250px] -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
-          src="/me_irl.jpg"
+        <Image
+          width={350}
+          height={350}
+          class="lg:blur-sm lg:hover:blur-0 grayscale -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
+          src={import("../assets/images/me_irl.jpg")}
           alt="me"
+          format={"webp"}
         />
         <div class="pt-8 flex flex-col gap-2">
-          <p class="font-social text-lg">
+          <p class="font-social text-lg font-bold">
             Currently interning at <a href="https://www.cleverfranke.com/"
               >CLEVER°FRANKE</a
             > as a front-end developer.
