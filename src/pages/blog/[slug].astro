@@ -1,0 +1,27 @@
+---
+import { getFileFromFilePath } from "src/utils/strings";
+
+export interface FrontMatter {
+        title: string,
+        slug: string,
+        description: string,
+        tags: string[],
+        createdAt: string
+    }
+export async function getStaticPaths() {
+    const markdownfiles = await Astro.glob("../../posts/*.md");
+
+    console.log(markdownfiles[0].frontmatter);
+    console.log(markdownfiles[0]);
+    console.log(getFileFromFilePath(markdownfiles[0].file));
+
+    const params = markdownfiles.map(file => {
+        return {
+            params: { slug: file.frontmatter.slug}
+        }
+    })
+    return params;
+}
+---
+
+<div>Good dog!</div>

@@ -1,0 +1,42 @@
+---
+import { Image } from "@astrojs/image/components";
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="max-w-md mx-auto py-20">
+    <main>
+      <div class="max-w-md">
+        <div class="flex flex-col max-w-md group">
+         <h1>hello</h1>
+        </div>
+       
+        <div class="pt-8 flex flex-col gap-2">
+          <p class="font-dotGothic16 text-xl font-bold tracking-tightest leading-6">
+            hello
+          </p>
+        </div>
+      </div>
+      <footer class="my-2 text-sm max-w-xl lg:max-w-2xl py-8 font-social font-bold">
+        <div class="flex flex-row gap-4">
+          <a
+            class="text-sm text-blue-300 hover:text-blue-200"
+            href="https://twitter.com/hhhghq0"
+            target="_blank">Twitter</a
+          >
+          <a
+            class="text-sm text-blue-300 hover:text-blue-200"
+            href="https://github.com/yaikohi"
+            target="_blank">GitHub</a
+          >
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
