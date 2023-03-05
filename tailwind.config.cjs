@@ -16,7 +16,14 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        dotGothic16: ["DotGothic16", "sans-serif"],
+        social: ["Social", "sans-serif"],
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
+  corePlugins: {
+    fontFamily: true,
+  },
 };

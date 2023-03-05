@@ -3,6 +3,100 @@
 @tailwind utilities;
 
 @layer base {
+  /*
+  Font types
+  */
+
+  /* HAIRLINE */
+  @font-face {
+    font-family: "Social";
+    font-weight: 200;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Hairline.woff2")
+        format("woff2");
+    font-display: swap;
+  }
+
+  /* THIN */
+  @font-face {
+    font-family: "Social";
+    font-weight: 350;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Thin.woff2")
+        format("woff2");
+    font-display: swap;
+  }
+
+  /* LIGHT */
+  /* @font-face {
+    font-family: "Social";
+    font-weight: light;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Light.woff2")
+        format("woff2");
+    font-display: swap;
+  } */
+
+  /* REGULAR */
+  /* @font-face {
+    font-family: "Social";
+    font-weight: 400;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Regular.woff2")
+        format("woff2");
+    font-display: swap;
+  } */
+
+  /* BOOK */
+  /* @font-face {
+    font-family: "Social";
+    font-weight: 400;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Book.woff2")
+        format("woff2");
+            font-display: swap;
+
+  } */
+
+  /* MEDIUM */
+  /* @font-face {
+    font-family: "Social";
+    font-weight: 600;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Medium.woff2")
+        format("woff2");
+    font-display: swap;
+  } */
+
+  /* BOLD */
+  @font-face {
+    font-family: "Social";
+    font-weight: bold;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Bold.woff2")
+        format("woff2");
+        font-display: swap;
+
+  }
+
+  /* BLACK */
+  @font-face {
+    font-family: "Social";
+    font-weight: 800;
+    src: url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff")
+        format("woff"),
+      url("/fonts/ABC\ Social\ Edu\ Web/ABCSocialEdu-Black.woff2")
+        format("woff2");
+    font-display: swap;
+  }
+
   a {
     @apply text-rose-500 hover:text-rose-800;
   }
@@ -25,13 +119,17 @@
 
 body {
   font-family: Verdana, sans-serif;
-  margin-right: 40rem;
   padding: 2rem;
   /* max-width: 65ch; */
   /* text-align: left; */
   /* background-color: rgb(33, 33, 33); */
-  background: rgb(15,23,42);
-  background: linear-gradient(90deg, rgba(15,23,42,1) 0%, rgba(41,41,62,1) 80%, rgba(134,100,123,1) 100%); 
+  /* background: rgb(15,23,42); */
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 1) 0%,
+    rgba(41, 41, 62, 1) 80%,
+    rgba(134, 100, 123, 1) 100%
+  );
   color: rgb(223, 223, 223);
   overflow-wrap: break-word;
   line-height: 1.5;
