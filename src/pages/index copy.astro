@@ -6,22 +6,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="max-w-md mx-auto py-20">
-    <main class="font-social">
+    <main>
       <div class="max-w-md">
-        <div class="flex flex-col max-w-md">
+        <div class="flex flex-col max-w-md group">
           <sup class="text-slate-500 font-dotGothic16">
-            Not sure what to write down... do you like <a
-              href="https://fonts.google.com/specimen/DotGothic16">this</a
-            > font?
+            何をここに書こうかよく分からなくて...
           </sup>
-          <h2 class="font-black tracking-tight">
-            hi, my name is <span class="text-yellow-400">Erik</span>
+          <h2 class="font-dotGothic16 font-bold">
+            どうも、<span class="text-yellow-400">Erik</span>と申します
           </h2>
+          <sub
+            class="indent-[97px] lg:group-hover:block lg:hidden font-dotGothic16 text-slate-400"
+            >エリック</sub
+          >
         </div>
         <Image
           width={350}
@@ -32,17 +34,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
           format={"webp"}
         />
         <div class="pt-8 flex flex-col gap-2">
-          <p class="text-xl font-bold leading-5 tracking-wide">
-            Doing the university things right now.
-            <p class="text-lg leading-4 tracking-wide">
-              I sometimes study Japanese and also build applications I abandon
-              halfway.
+          <p class="font-dotGothic16 text-xl font-bold tracking-tightest leading-6">
+            今現在は<a href="https://www.cleverfranke.com/">CLEVER°FRANKE</a
+            >でフロントエンド開発者としてインターンしています。
+            <p class="text-lg font-light font-dotGothic16 leading-6">
+              時々日本語を勉強したり、自分のホビープロジェクトを途中で諦めたりします。
             </p>
           </p>
         </div>
       </div>
+      <Footer lang="en" />
     </main>
-
-    <Footer lang="jp" />
   </body>
 </html>

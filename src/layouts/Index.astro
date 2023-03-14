@@ -31,14 +31,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
           alt="me"
           format={"webp"}
         />
-        <div class="pt-8 flex flex-col gap-2">
-          <p class="text-xl font-bold leading-5 tracking-wide">
-            I am a software developer
-            <p class="text-lg leading-4 tracking-wide">
-              that sometimes study Japanese and also builds applications that
-              end up being abandoned halfway.
-            </p>
-          </p>
+        <div
+          class="pt-8 flex flex-col gap-2 prose prose-gray prose-a:text-sky-300 prose-a:font-bold prose-p:text-gray-200"
+        >
+          <slot />
         </div>
       </div>
     </main>
