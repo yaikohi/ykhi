@@ -47,6 +47,7 @@ Any professional is interested in personal hobbies so I will write down a list o
 - I am getting off-track so let me continue this list with things I like
 - climbing
 - software and frameworks that are in beta such as qwik and solidstart
+- it's not them being in beta that I like but more that I enjoy new frameworks and technologies popping up and being able to experiment with them
 - as for frameworks I really enjoy astro and sveltekit as well.
 - nextjs and nuxtjs are fine.
 - I enjoy not taking medication but I don't mind taking medication
