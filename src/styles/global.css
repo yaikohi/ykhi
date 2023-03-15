@@ -6,7 +6,6 @@
   /*
   Font types
   */
-
   /* HAIRLINE */
   @font-face {
     font-family: "Social";
@@ -17,7 +16,6 @@
         format("woff2");
     font-display: swap;
   }
-
   /* THIN */
   @font-face {
     font-family: "Social";
@@ -28,7 +26,6 @@
         format("woff2");
     font-display: swap;
   }
-
   /* LIGHT */
   /* @font-face {
     font-family: "Social";
@@ -39,7 +36,6 @@
         format("woff2");
     font-display: swap;
   } */
-
   /* REGULAR */
   /* @font-face {
     font-family: "Social";
@@ -50,7 +46,6 @@
         format("woff2");
     font-display: swap;
   } */
-
   /* BOOK */
   /* @font-face {
     font-family: "Social";
@@ -62,7 +57,6 @@
             font-display: swap;
 
   } */
-
   /* MEDIUM */
   /* @font-face {
     font-family: "Social";
@@ -73,7 +67,6 @@
         format("woff2");
     font-display: swap;
   } */
-
   /* BOLD */
   @font-face {
     font-family: "Social";
@@ -85,7 +78,6 @@
         font-display: swap;
 
   }
-
   /* BLACK */
   @font-face {
     font-family: "Social";
@@ -132,5 +124,5 @@ body {
   );
   color: rgb(223, 223, 223);
   overflow-wrap: break-word;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
