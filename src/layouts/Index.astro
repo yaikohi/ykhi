@@ -17,30 +17,31 @@ type Props = MarkdownLayoutProps<{
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="max-w-md mx-auto py-20">
+  <body class="py-20">
     <main class="font-social">
-      <div class="max-w-md">
-        <div class="flex flex-col max-w-md">
-          <sup class="text-slate-500 font-dotGothic16">
+      <div class="max-w-2xl mx-auto ">
+        <div class="flex flex-col">
+          <p class="text-slate-500 font-dotGothic16 text-xs">
             Not sure what to write down... do you like <a
               href="https://fonts.google.com/specimen/DotGothic16">this</a
             > font?
-          </sup>
+          </p>
           <h1 class="font-black tracking-tight">
             hi, my name is <span class="text-sky-300">Erik</span>
           </h1>
+       
+          <Footer lang="jp" />
         </div>
-        <Image
-          width={350}
-          height={350}
-          class="lg:blur-sm lg:hover:blur-0 grayscale -hue-rotate-30 contrast-150 my-8 mx-auto shadow-md hover:shadow-slate-800"
-          src={"/images/me_irl.jpg"}
-          alt="me"
-        />
+        <!-- <Image
+        width={350}
+        height={350}
+        class="lg:blur-sm lg:hover:blur-0 grayscale -hue-rotate-30 contrast-150 my-8 ml-auto shadow-md hover:shadow-slate-800"
+        src={"/images/me_irl.jpg"}
+        alt="me"
+        /> -->
         <div
           class="pt-8 flex flex-col gap-2 prose prose-slate prose-a:text-sky-300 prose-a:font-bold prose-lg"
         >
-          <Footer lang="jp" />
           <slot />
         </div>
       </div>
